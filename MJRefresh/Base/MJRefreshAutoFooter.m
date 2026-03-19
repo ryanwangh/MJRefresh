@@ -152,6 +152,7 @@
         }
         
         if (MJRefreshStateRefreshing == oldState) {
+#if !TARGET_OS_TV
             if (self.scrollView.pagingEnabled) {
                 CGPoint offset = self.scrollView.contentOffset;
                 offset.y -= self.scrollView.mj_insetB;
@@ -168,7 +169,7 @@
                 }];
                 return;
             }
-            
+#endif
             if (self.endRefreshingCompletionBlock) {
                 self.endRefreshingCompletionBlock();
             }

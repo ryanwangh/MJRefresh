@@ -61,7 +61,11 @@
     }
 #endif
     
+#if TARGET_OS_TV
+    _activityIndicatorViewStyle = UIActivityIndicatorViewStyleMedium;
+#else
     _activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
+#endif
 }
 
 - (void)placeSubviews
