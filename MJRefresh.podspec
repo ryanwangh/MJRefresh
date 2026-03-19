@@ -5,11 +5,12 @@ Pod::Spec.new do |s|
     s.homepage     = 'https://github.com/CoderMJLee/MJRefresh'
     s.license      = 'MIT'
     s.authors      = {'MJ Lee' => 'richermj123go@vip.qq.com'}
-    s.platform     = :ios, '12.0'
     s.source       = {:git => 'https://github.com/CoderMJLee/MJRefresh.git', :tag => s.version}
     s.source_files = 'MJRefresh/**/*.{h,m}'
     s.exclude_files = 'MJRefresh/include/**'
     s.resource = 'MJRefresh/MJRefresh.bundle'
     s.resource_bundles = { 'MJRefresh.Privacy' => 'MJRefresh/PrivacyInfo.xcprivacy' }
     s.requires_arc = true
+s.ios.deployment_target = '12.0'
+  s.tvos.deployment_target = '12.0'
 end
